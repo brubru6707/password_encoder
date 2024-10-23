@@ -20,7 +20,7 @@ def encode_password(password):
 def decode_password(encoded_password):
     decoded_password = ""
     for digit in encoded_password: 
-        encoded_password_digit = (int(digit) - 3) if (int(digit) > 3) else (int(digit) + 7)
+        encoded_password_digit = (int(digit) - 3) if (int(digit) > 3) else (int(digit) + 7) %10
         decoded_password += str(encoded_password_digit)
 
     return decoded_password
